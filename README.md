@@ -21,8 +21,8 @@ Antes de rodar o projeto, você precisa ter instalado na sua máquina:
 3. Execute os comandos:
 
 ```bash
-git clone https://github.com/Hatgiargyrion/automationExercise.git
-cd automationExercise
+git clone https://github.com/Hatgiargyrion/qa-commerce-cypress.git
+cd qa-commerce-cypress
 ```
 
 Após clonar o projeto e entrar na pasta, instale as dependências com:
