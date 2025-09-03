@@ -11,10 +11,6 @@ When('confirmo clicando no botão Atualizar', () => {
     atualizacaoCadastralPA.clicarAtualizar()
 })
 
-When('deve aparecer a mensagem de confirmação {string} ao concluir a atualização', (mensagem) => {
-    atualizacaoCadastralPA.validarMensagemSucesso(mensagem)
-})
-
 When('insiro apenas o campo Email com valor fora do padrão aceito', () => {
     atualizacaoCadastralPA.preencherCampos(false)
 })

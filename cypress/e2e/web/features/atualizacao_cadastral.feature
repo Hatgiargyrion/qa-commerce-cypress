@@ -9,7 +9,7 @@ Feature: Alteração de dados cadastrais
     Scenario: Alterar informações do cadastro com sucesso
         When preencho todos os campos com informações atualizadas
         And confirmo clicando no botão Atualizar
-        Then deve aparecer a mensagem de confirmação "Usuário atualizado com sucesso!" ao concluir a atualização
+        Then deve aparecer a mensagem de sucesso "Usuário atualizado com sucesso!"
 
     Scenario: Tentativa de atualização com email inválido
         When insiro apenas o campo Email com valor fora do padrão aceito

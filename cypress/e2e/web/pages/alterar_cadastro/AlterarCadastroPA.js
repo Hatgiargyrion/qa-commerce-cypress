@@ -20,10 +20,6 @@ class AlterarCadastroPA extends AlterarCadastroPO {
         this.elementos.btnAtualizar().click();
     }
 
-    validarMensagemSucesso(mensagem) {
-        this.elementos.lblUsuarioAtualizado().should('contain', mensagem)
-    }
-
     validarAtualizacaoNaoSucessedida() {
         this.elementos.lblUsuarioAtualizado().should('not.be.visible')
     }

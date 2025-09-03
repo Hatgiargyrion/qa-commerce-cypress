@@ -17,6 +17,10 @@ class CommonPA extends CommonPO {
         }
     }
 
+    validarMensagem(mensagem) {
+        this.elementos.containerMensagem().should('contain', mensagem)
+    }
+
 }
 
 export default CommonPA
