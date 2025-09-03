@@ -1,6 +1,23 @@
 {
+  "name": "qa-commerce-cypress",
+  "version": "1.0.0",
+  "description": "Projeto de testes automatizados com Cypress e Cucumber",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
+  },
+  "keywords": [
+    "cypress",
+    "testing",
+    "automation",
+    "e2e",
+    "cucumber"
+  ],
+  "author": "Matheus S. Hatgiargyrion",
+  "license": "MIT",
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^23.0.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.5",
     "cypress": "^15.1.0"
   }
 }

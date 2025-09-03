@@ -1,25 +1,41 @@
-// ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+Cypress.Commands.add('gerarNomeAleatorio', () => {
+    const nomes = ["João", "Maria", "Lucas", "Ana", "Gabriel", "Beatriz"];
+    const sobrenomes = ["Silva", "Souza", "Oliveira", "Costa", "Pereira"];
+    const nome = nomes[Math.floor(Math.random() * nomes.length)];
+    const sobrenome = sobrenomes[Math.floor(Math.random() * sobrenomes.length)];
+    return `${nome} ${sobrenome}`;
+});
+
+Cypress.Commands.add('gerarEmailAleatorio', (isValid) => {
+    const dominios = ["gmail.com", "yahoo.com", "hotmail.com"];
+    const nomeEmail = Math.random().toString(36).substring(2, 10);
+    let dominio = ''
+    if (isValid) {
+        dominio = dominios[Math.floor(Math.random() * dominios.length)];
+    }
+
+    return `${nomeEmail}@${dominio}`;
+});
+
+Cypress.Commands.add('gerarSenhaValida', (tamanho = 6) => {
+    const letrasMinusculas = "abcdefghijklmnopqrstuvwxyz";
+    const letrasMaiusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const numeros = "0123456789";
+    const especiais = "!@#$%^&*()";
+
+    if (tamanho < 6) tamanho = 6;
+
+    let senha = '';
+    senha += letrasMaiusculas.charAt(Math.floor(Math.random() * letrasMaiusculas.length));
+    senha += especiais.charAt(Math.floor(Math.random() * especiais.length));
+
+    const todosCaracteres = letrasMinusculas + letrasMaiusculas + numeros + especiais;
+
+    for (let i = senha.length; i < tamanho; i++) {
+        senha += todosCaracteres.charAt(Math.floor(Math.random() * todosCaracteres.length));
+    }
+
+    senha = senha.split('').sort(() => 0.5 - Math.random()).join('');
+
+    return senha;
+});

@@ -1,9 +1,27 @@
 const { defineConfig } = require("cypress");
+const createBundler = require("@bahmutov/cypress-esbuild-preprocessor");
+const createEsbuildPlugin = require("@badeball/cypress-cucumber-preprocessor/esbuild").createEsbuildPlugin;
+const { addCucumberPreprocessorPlugin } = require("@badeball/cypress-cucumber-preprocessor");
 
 module.exports = defineConfig({
   e2e: {
-    setupNodeEvents(on, config) {
-      // implement node event listeners here
+    specPattern: "cypress/e2e/**/*.feature",
+
+    setupNodeEvents: async (on, config) => {
+
+      config.env = config.env || {};
+      config.env.stepDefinitions = "cypress/e2e/**/steps/**/*.{js,ts}";
+
+      await addCucumberPreprocessorPlugin(on, config);
+
+      on(
+        "file:preprocessor",
+        createBundler({
+          plugins: [createEsbuildPlugin(config)],
+        })
+      );
+
+      return config;
     },
   },
 });
