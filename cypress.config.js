@@ -6,6 +6,7 @@ const { addCucumberPreprocessorPlugin } = require("@badeball/cypress-cucumber-pr
 module.exports = defineConfig({
   e2e: {
     specPattern: "cypress/e2e/**/*.feature",
+    baseUrl: "http://localhost:3000/api",
 
     setupNodeEvents: async (on, config) => {
 
