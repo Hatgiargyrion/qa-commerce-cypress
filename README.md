@@ -80,3 +80,11 @@ Para rodar todos os testes gerando report:
 ```bash
 npm run test:all
 ```
+
+---
+
+## Configuração antes de rodar
+
+O projeto conta com um arquivo de configuração, presente na raiz do projeto "cypress.env.json". Nesse arquivo é possível configurar ambiente, tags e urls. 
+
+⚠️ Certifique-se que estão apontando para o ambiente correto
