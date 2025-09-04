@@ -18,7 +18,7 @@ Antes de rodar o projeto, você precisa ter instalado na sua máquina:
 
 Este projeto depende do site que será testado. É necessário clonar e executar outro projeto que contém a aplicação web para que os testes funcionem corretamente.
 
-## Clone o projeto da aplicação web (substitua pelo link correto)
+## Clone o projeto da aplicação web
 
 ```bash
 git clone https://github.com/fabioaraujoqa/qa-commerce.git
