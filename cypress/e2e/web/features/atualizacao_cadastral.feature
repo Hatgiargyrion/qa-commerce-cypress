@@ -6,11 +6,13 @@ Feature: Alteração de dados cadastrais
         And efetuo login utilizando credenciais de admim
         And entro na seção Atualizar Cadastro
 
+    @HIGH @WEB @ATUALIZACAO_CADATRAL @CT004
     Scenario: Alterar informações do cadastro com sucesso
         When preencho todos os campos com informações atualizadas
         And confirmo clicando no botão Atualizar
         Then deve aparecer a mensagem de sucesso "Usuário atualizado com sucesso!"
 
+    @HIGH @WEB @ATUALIZACAO_CADATRAL @CT005
     Scenario: Tentativa de atualização com email inválido
         When insiro apenas o campo Email com valor fora do padrão aceito
         And confirmo clicando no botão Atualizar

@@ -6,6 +6,7 @@ Feature: Processo de Checkout
         And acesso o Submenu "Carrinho"
         And sigo para a página de Checkout
 
+    @HIGH @WEB @CHECKOUT @CT006
     Scenario: Finalizar checkout com sucesso
         When preencho todos os campos obrigatórios
         And seleciono o método de pagamento "Boleto"
@@ -13,6 +14,7 @@ Feature: Processo de Checkout
         And concluo o pedido
         Then devo ser direcionado para a página de status do pedido com pagamento aprovado
 
+    @HIGH @WEB @CHECKOUT @CT007
     Scenario: Finalizar checkout sem aceitar os termos
         When preencho todos os campos obrigatórios
         And seleciono o método de pagamento "Pix"

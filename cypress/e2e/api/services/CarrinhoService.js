@@ -2,7 +2,7 @@ import RestRequests from '@support/RestRequests';
 
 const CARRINHO_PATH = '/carrinho';
 
-class CarrinhoController extends RestRequests {
+class CarrinhoService extends RestRequests {
     adicionarProdutoAoCarrinho() {
         cy.get('@produtoEscolhido').then(produto => {
             const body = {
@@ -14,4 +14,4 @@ class CarrinhoController extends RestRequests {
     }
 }
 
-export default CarrinhoController
+export default CarrinhoService

@@ -1,5 +1,6 @@
 Feature: Carrinho
 
+  @HIGH @API @CARRINHO @CT001
   Scenario: Inclusão de produto no carrinho
     Given que pesquiso um produto disponível na lista de produtos
     When adiciono esse produto ao carrinho de compras

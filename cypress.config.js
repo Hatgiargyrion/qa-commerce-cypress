@@ -6,11 +6,20 @@ const { addCucumberPreprocessorPlugin } = require("@badeball/cypress-cucumber-pr
 module.exports = defineConfig({
   e2e: {
     specPattern: "cypress/e2e/**/*.feature",
-    baseUrl: "http://localhost:3000/api",
 
     setupNodeEvents: async (on, config) => {
+      const env = config.env || {};
+      const ambiente = env.ambiente || "QA";
+      
+      if (env.urls && env.urls[ambiente]) {
+        config.baseUrl = env.urls[ambiente];
+        console.log("BaseUrl configurada para:", config.baseUrl);
+      } else {
+        console.warn(`⚠️ URL do ambiente "${ambiente}" não encontrada. Usando padrão.`);
+      }
 
-      config.env = config.env || {};
+      config.env.TAGS = env.tags || "";
+
       config.env.stepDefinitions = "cypress/e2e/**/steps/**/*.{js,ts}";
 
       await addCucumberPreprocessorPlugin(on, config);
