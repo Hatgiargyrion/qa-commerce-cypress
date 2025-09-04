@@ -4,6 +4,13 @@ const createEsbuildPlugin = require("@badeball/cypress-cucumber-preprocessor/esb
 const { addCucumberPreprocessorPlugin } = require("@badeball/cypress-cucumber-preprocessor");
 
 module.exports = defineConfig({
+  reporter: 'mochawesome',
+  reporterOptions: {
+    reportDir: 'cypress/reports',
+    overwrite: false,
+    html: false,
+    json: true  
+  },
   e2e: {
     specPattern: "cypress/e2e/**/*.feature",
 
