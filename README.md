@@ -72,5 +72,5 @@ npm install
 Após instalar as dependências, abra o cypress:
 
 ```bash
-npx cypress open
+npm run cypress:open
 ```
