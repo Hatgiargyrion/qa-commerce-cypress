@@ -1,9 +1,9 @@
 import HomePO from "./HomePO";
 
-class HomePA extends HomePO {
-
+class HomePA extends HomePO {   
+    
     acessarWebsite() {
-        cy.visit('http://localhost:3000/')
+        cy.visit(this.site)
         this.elementos.textoPrincipalHome().should('be.visible')
     }
 

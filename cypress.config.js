@@ -9,13 +9,15 @@ module.exports = defineConfig({
 
     setupNodeEvents: async (on, config) => {
       const env = config.env || {};
+
       const ambiente = env.ambiente || "QA";
-      
+      const site = env.site || "";
+
       if (env.urls && env.urls[ambiente]) {
         config.baseUrl = env.urls[ambiente];
         console.log("BaseUrl configurada para:", config.baseUrl);
       } else {
-        console.warn(`⚠️ URL do ambiente "${ambiente}" não encontrada. Usando padrão.`);
+        console.warn(`URL do ambiente "${ambiente}" não encontrada. Usando padrão.`);
       }
 
       config.env.TAGS = env.tags || "";
