@@ -43,6 +43,8 @@ npm start
 
 A aplicação web ficará disponível em http://localhost:3000 (ou a porta configurada no projeto web).
 
+---
+
 ## 🚀 Como clonar o projeto
 
 1. Abra o terminal.
