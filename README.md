@@ -14,21 +14,32 @@ Antes de rodar o projeto, você precisa ter instalado na sua máquina:
 
 ---
 
-⚠️ Dependência do Projeto Web
+## ⚠️ Dependência do Projeto Web
 
 Este projeto depende do site que será testado. É necessário clonar e executar outro projeto que contém a aplicação web para que os testes funcionem corretamente.
 
-# Clone o projeto da aplicação web (substitua pelo link correto)
+## Clone o projeto da aplicação web (substitua pelo link correto)
+
+```bash
 git clone https://github.com/fabioaraujoqa/qa-commerce.git
+```
+Entre na pasta do projeto web
 
-# Entre na pasta do projeto web
+```bash
 cd qa-commerce-web
+```
 
-# Instale as dependências
+Instale as dependências
+
+```bash
 npm install
+```
 
-# Execute a aplicação
+Execute a aplicação
+
+```bash
 npm start
+```
 
 A aplicação web ficará disponível em http://localhost:3000 (ou a porta configurada no projeto web).
 
