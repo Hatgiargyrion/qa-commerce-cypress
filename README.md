@@ -74,3 +74,9 @@ Após instalar as dependências, abra o cypress:
 ```bash
 npm run cypress:open
 ```
+
+Para rodar todos os testes gerando report:
+
+```bash
+npm run test:all
+```
