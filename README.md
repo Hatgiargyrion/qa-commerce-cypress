@@ -14,14 +14,39 @@ Antes de rodar o projeto, você precisa ter instalado na sua máquina:
 
 ---
 
+⚠️ Dependência do Projeto Web
+
+Este projeto depende do site que será testado. É necessário clonar e executar outro projeto que contém a aplicação web para que os testes funcionem corretamente.
+
+# Clone o projeto da aplicação web (substitua pelo link correto)
+git clone https://github.com/fabioaraujoqa/qa-commerce.git
+
+# Entre na pasta do projeto web
+cd qa-commerce-web
+
+# Instale as dependências
+npm install
+
+# Execute a aplicação
+npm start
+
+A aplicação web ficará disponível em http://localhost:3000 (ou a porta configurada no projeto web).
+
 ## 🚀 Como clonar o projeto
 
 1. Abra o terminal.
 2. Navegue até a pasta onde deseja salvar o projeto.
 3. Execute os comandos:
 
+Clone o projeto
+
 ```bash
 git clone https://github.com/Hatgiargyrion/qa-commerce-cypress.git
+```
+
+Entre na pasta
+
+```bash
 cd qa-commerce-cypress
 ```
 
@@ -32,4 +57,7 @@ npm install
 ```
 
 Após instalar as dependências, abra o cypress:
+
+```bash
 npx cypress open
+```
